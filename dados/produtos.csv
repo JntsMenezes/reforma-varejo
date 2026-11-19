@@ -1,0 +1,70 @@
+ramo;produto;categoria;ncm;nbs;cst;cClassTrib;preco;qtd_mes
+Farmácia;Dipirona 500mg 10 comp;Medicamento;30049099;;200;200032;8.90;620
+Farmácia;Paracetamol 750mg 20 comp;Medicamento;30049099;;200;200032;12.50;480
+Farmácia;Ibuprofeno 400mg 10 caps;Medicamento;30049099;;200;200032;16.90;350
+Farmácia;Losartana 50mg 30 comp;Medicamento;30049099;;200;200032;14.90;410
+Farmácia;Omeprazol 20mg 28 caps;Medicamento;30049099;;200;200032;22.40;300
+Farmácia;Amoxicilina 500mg 21 caps;Medicamento;30049099;;200;200032;29.90;160
+Farmácia;Sinvastatina 20mg 30 comp;Medicamento;30049099;;200;200032;18.70;220
+Farmácia;Xarope para tosse 120ml;Medicamento;30049099;;200;200032;34.90;140
+Farmácia;Antialérgico loratadina 12 comp;Medicamento;30049099;;200;200032;19.90;190
+Farmácia;Anticoncepcional 21 comp;Medicamento;30049099;;200;200032;42.00;180
+Farmácia;Insulina NPH 10ml;Medicamento alíquota zero;30043100;;200;200009;89.00;45
+Farmácia;Antirretroviral 30 comp;Medicamento alíquota zero;30049099;;200;200009;210.00;12
+Farmácia;Seringa descartável 1ml;Dispositivo médico;90183111;;200;200030;1.20;900
+Farmácia;Curativo adesivo 10 un;Dispositivo médico;30059090;;200;200030;9.90;260
+Farmácia;Luva de procedimento 100 un;Dispositivo médico;40151900;;200;200030;39.90;40
+Farmácia;Termômetro digital;Dispositivo médico;90251990;;200;200004;24.90;55
+Farmácia;Bolsa de colostomia;Dispositivo médico;30069110;;200;200030;68.00;25
+Farmácia;Pasta de dente 90g;Higiene (Anexo VIII);33061000;;200;200035;6.90;520
+Farmácia;Sabonete em barra 90g;Higiene (Anexo VIII);34011190;;200;200035;3.50;700
+Farmácia;Escova de dentes;Higiene (Anexo VIII);96032100;;200;200035;9.90;240
+Farmácia;Fralda infantil M 30 un;Higiene (Anexo VIII);96190000;;200;200035;49.90;210
+Farmácia;Absorvente 8 un;Higiene (Anexo VIII);96190000;;200;200035;7.50;380
+Farmácia;Papel higiênico 4 rolos;Higiene (Anexo VIII);48181000;;200;200035;8.90;300
+Farmácia;Fórmula infantil 800g;Alimento (Anexo I);19011010;;200;200003;59.90;90
+Farmácia;Protetor solar FPS 50;Cosmético e perfumaria;33049990;;000;000001;54.90;160
+Farmácia;Hidratante corporal 400ml;Cosmético e perfumaria;33049910;;000;000001;32.90;180
+Farmácia;Shampoo 350ml;Cosmético e perfumaria;33051000;;000;000001;21.90;260
+Farmácia;Desodorante aerosol;Cosmético e perfumaria;33072010;;000;000001;17.90;340
+Farmácia;Perfume colônia 100ml;Cosmético e perfumaria;33030020;;000;000001;89.90;45
+Farmácia;Esmalte;Cosmético e perfumaria;33043000;;000;000001;8.50;220
+Farmácia;Vitamina C 1g 10 efervescentes;Suplemento;21069030;;000;000001;24.90;200
+Farmácia;Whey protein 900g;Suplemento;21061000;;000;000001;139.90;35
+Farmácia;Colágeno 300g;Suplemento;21069090;;000;000001;79.90;60
+Mercadinho;Arroz tipo 1 5kg;Cesta básica (Anexo I);10063021;;200;200003;27.90;420
+Mercadinho;Feijão carioca 1kg;Cesta básica (Anexo I);07133319;;200;200003;8.49;610
+Mercadinho;Leite UHT integral 1L;Cesta básica (Anexo I);04012010;;200;200003;5.29;1800
+Mercadinho;Café torrado 500g;Cesta básica (Anexo I);09012100;;200;200003;24.90;380
+Mercadinho;Açúcar cristal 5kg;Cesta básica (Anexo I);17019900;;200;200003;21.90;260
+Mercadinho;Farinha de mandioca 1kg;Cesta básica (Anexo I);11062000;;200;200003;7.90;140
+Mercadinho;Macarrão com ovos 500g;Cesta básica (Anexo I);19021100;;200;200003;4.99;520
+Mercadinho;Carne bovina (patinho) kg;Cesta básica (Anexo I);02013000;;200;200003;44.90;310
+Mercadinho;Muçarela fatiada kg;Cesta básica (Anexo I);04061010;;200;200003;49.90;120
+Mercadinho;Ovos brancos 12 un;Hortifruti e ovos (Anexo XV);04072100;;200;200014;11.90;480
+Mercadinho;Tomate kg;Hortifruti e ovos (Anexo XV);07020000;;200;200014;7.99;350
+Mercadinho;Banana prata kg;Hortifruti e ovos (Anexo XV);08039000;;200;200014;6.49;420
+Mercadinho;Óleo de soja 900ml;Alimento reduzido (Anexo VII);15079011;;200;200034;7.49;540
+Mercadinho;Mel 500g;Alimento reduzido (Anexo VII);04090000;;200;200034;29.90;40
+Mercadinho;Suco de uva integral 1L;Alimento reduzido (Anexo VII);20098990;;200;200034;16.90;150
+Mercadinho;Pão de forma 500g;Mercearia (alíquota cheia);19052090;;000;000001;9.99;380
+Mercadinho;Biscoito recheado 130g;Mercearia (alíquota cheia);19053100;;000;000001;3.49;900
+Mercadinho;Chocolate ao leite 90g;Mercearia (alíquota cheia);18063210;;000;000001;6.99;450
+Mercadinho;Linguiça toscana kg;Mercearia (alíquota cheia);16010000;;000;000001;22.90;160
+Mercadinho;Detergente 500ml;Limpeza (alíquota cheia);34025000;;000;000001;2.79;700
+Mercadinho;Sabão em pó 1,6kg;Limpeza (alíquota cheia);34025000;;000;000001;21.90;220
+Mercadinho;Papel higiênico 12 rolos;Higiene (Anexo VIII);48181000;;200;200035;19.90;260
+Mercadinho;Sabonete em barra 85g;Higiene (Anexo VIII);34011190;;200;200035;2.79;600
+Pet shop;Ração cão adulto 15kg;Ração e petiscos;23091000;;000;000001;189.90;70
+Pet shop;Ração gato castrado 10kg;Ração e petiscos;23091000;;000;000001;164.90;55
+Pet shop;Ração úmida sachê 85g;Ração e petiscos;23091000;;000;000001;3.99;900
+Pet shop;Petisco bifinho 65g;Ração e petiscos;23091000;;000;000001;9.90;300
+Pet shop;Antipulgas comprimido;Medicamento veterinário;30049099;;000;000001;79.90;90
+Pet shop;Vermífugo 4 comp;Medicamento veterinário;30049099;;000;000001;34.90;110
+Pet shop;Areia higiênica 4kg;Acessórios e higiene pet;25081000;;000;000001;24.90;180
+Pet shop;Shampoo pet 500ml;Acessórios e higiene pet;33059000;;000;000001;29.90;80
+Pet shop;Coleira de nylon;Acessórios e higiene pet;42010090;;000;000001;34.90;60
+Pet shop;Brinquedo mordedor;Acessórios e higiene pet;39269090;;000;000001;19.90;120
+Pet shop;Banho e tosa (porte médio);Serviço;;114056000;000;000001;90.00;260
+Pet shop;Hospedagem diária;Serviço;;114056000;000;000001;80.00;90
+Pet shop;Consulta veterinária;Serviço;;114051200;000;000001;150.00;120
