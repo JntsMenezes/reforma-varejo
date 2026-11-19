@@ -77,6 +77,24 @@ select{padding-right:32px;appearance:none;cursor:pointer;min-width:160px;
 .tag.cheia{background:var(--sunk);color:var(--ink-2)}
 .tag.serv{background:var(--warn-soft);color:var(--warn)}
 
+/* explicação */
+.intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;margin-bottom:16px}
+.intro .txt{padding:22px 26px;display:grid;gap:10px;align-content:start}
+.intro h2{font-size:18px;font-weight:600;letter-spacing:-.015em;margin:0}
+.intro p{margin:0;color:var(--ink-2);max-width:66ch}
+.intro p b{color:var(--ink);font-weight:500}
+.regras{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.regras .tag{margin-left:0;font-size:13px;padding:3px 10px}
+.exemplo{padding:22px 24px;display:grid;gap:12px;align-content:start}
+.exemplo .lb{font-size:13px;color:var(--ink-2)}
+.exemplo .prod{font-size:17px;font-weight:600;letter-spacing:-.01em}
+.recibo{display:grid;gap:6px;font-size:14.5px}
+.recibo div{display:flex;justify-content:space-between;gap:12px;padding-bottom:6px;border-bottom:1px dashed var(--line)}
+.recibo div:last-child{border-bottom:0;padding-bottom:0}
+.recibo span:first-child{color:var(--ink-2)}
+.recibo b{font-weight:600}
+@media (max-width:900px){.intro{grid-template-columns:1fr}}
+
 /* blocos */
 .bloco{padding:20px 22px;margin-bottom:16px}
 .cab{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
@@ -172,13 +190,24 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
     </div>
   </header>
 
+  <section class="intro">
+    <div class="painel txt">
+      <h2>O que esta página mostra</h2>
+      <p>A reforma tributária troca cinco impostos sobre o consumo (<b>ICMS, ISS, PIS, Cofins e IPI</b>) por dois: a <b>CBS</b>, do governo federal, e o <b>IBS</b>, de estados e municípios. A troca vai até 2033.</p>
+      <p>Nem todo produto vai pagar igual. A lei dá desconto para alguns grupos e zera o imposto de outros:</p>
+      <div class="regras"><span class="tag red">desconto de 60%: remédio, higiene, alguns alimentos</span><span class="tag zero">sem imposto: cesta básica, hortifrúti, alguns remédios</span><span class="tag cheia">taxa cheia: o resto</span></div>
+      <p>Escolha um negócio de exemplo no alto da página. Os números abaixo mostram quanto imposto vai dentro do preço hoje e quanto vai em 2033, produto por produto.</p>
+    </div>
+    <div class="painel exemplo" id="exemplo"></div>
+  </section>
+
   <section class="resumo">
     <div class="painel hero">
-      <div class="mes">Imposto embutido nas vendas do mês, hoje</div>
+      <div class="mes">Imposto que vai dentro do preço, nas vendas de um mês, hoje</div>
       <div class="valor num" id="h-valor"></div>
       <div class="comp">
         <div><span class="lb">Em 2033</span><span class="v num" id="c1"></span><span class="rs num" id="c1s"></span></div>
-        <div><span class="lb">Preço da cesta em 2033</span><span class="v num" id="c2"></span><span class="rs">mantendo a receita líquida</span></div>
+        <div><span class="lb">Preço da cesta em 2033</span><span class="v num" id="c2"></span><span class="rs">para a loja ganhar o mesmo de hoje</span></div>
       </div>
       <div class="pilha" id="pilha" aria-label="Composição do imposto hoje e em 2033"></div>
       <p class="frase" id="frase"></p>
@@ -209,7 +238,7 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
     <div class="cab">
       <div>
         <h2>Produto a produto</h2>
-        <p class="nota">Carga = imposto embutido no preço. Clique numa linha para ver códigos, artigo da LC 214 e a conta.</p>
+        <p class="nota">Clique num produto para ver o artigo da lei, os códigos fiscais e a conta.</p>
       </div>
       <input class="busca" id="busca" type="search" placeholder="Buscar produto, NCM ou código" aria-label="Buscar produto">
     </div>
@@ -218,9 +247,9 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
         <thead><tr>
           <th class="l rank">#</th>
           <th class="l" data-col="produto"><button type="button">Produto</button></th>
-          <th class="l hide-m">Alíquota 2033</th>
-          <th data-col="tHoje"><button type="button">Carga hoje</button></th>
-          <th data-col="cargaNovo"><button type="button">Carga 2033</button></th>
+          <th class="l hide-m">Regra em 2033</th>
+          <th data-col="tHoje"><button type="button">Imposto no preço hoje</button></th>
+          <th data-col="cargaNovo"><button type="button">Em 2033</button></th>
           <th class="hide-m" data-col="preco"><button type="button">Preço hoje</button></th>
           <th class="hide-m" data-col="precoNovo"><button type="button">Preço 2033</button></th>
           <th data-col="variacao"><button type="button">Variação do preço</button></th>
@@ -234,7 +263,7 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
     <div class="cab">
       <div>
         <h2>Imposto no preço hoje</h2>
-        <p class="nota">Estimativa da carga da cadeia toda, em % do preço de venda, para SP. Troque pelos números do cliente.</p>
+        <p class="nota">Quanto do preço de venda é imposto hoje, somando fábrica, distribuidor e loja. São estimativas para São Paulo; troque pelos números da sua empresa.</p>
       </div>
       <button class="btn" id="reset" type="button">Voltar ao padrão</button>
     </div>
@@ -247,7 +276,7 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
   </section>
 
   <footer>
-    <span>Conta: receita líquida = preço de hoje menos o imposto embutido. Em 2033, CBS e IBS incidem por fora sobre essa receita, com a redução que a calculadora aplicou ao item.</span>
+    <span>Como a conta é feita: do preço de hoje, tiramos o imposto que está dentro dele. O que sobra é o que a loja ganha. Em 2033, a CBS e o IBS são cobrados sobre esse valor, com o desconto que a calculadora da Receita indicou para o produto.</span>
     <span>Fora da conta: créditos de entrada da loja, Simples Nacional, transição 2027–2032, ICMS-ST com MVA, Imposto Seletivo e cashback.</span>
     <span>Enquadramento, base legal e memória de cálculo: <a href="https://github.com/ReceitaFederal/calculadora-rtc-regime-regular" target="_blank" rel="noopener">calculadora da Receita Federal</a> (licença MIT), rodando localmente. Lojas, produtos, preços e volumes são fictícios.</span>
   </footer>
@@ -315,10 +344,10 @@ function calcula(it){
 }
 
 function tag(it){
-  if (it.redCbs >= 100) return `<span class="tag zero">zero</span>`;
-  if (it.redCbs > 0) return `<span class="tag red">${n1(it.redCbs,0)}% menor</span>`;
-  if (it.nbs) return `<span class="tag serv">serviço, cheia</span>`;
-  return `<span class="tag cheia">cheia</span>`;
+  if (it.redCbs >= 100) return `<span class="tag zero">sem imposto</span>`;
+  if (it.redCbs > 0) return `<span class="tag red">desconto de ${n1(it.redCbs,0)}%</span>`;
+  if (it.nbs) return `<span class="tag serv">serviço, taxa cheia</span>`;
+  return `<span class="tag cheia">taxa cheia</span>`;
 }
 
 function render(){
@@ -339,15 +368,32 @@ function render(){
   const queda = cats.reduce((a,c)=>(c.novo-c.hoje)<(a.novo-a.hoje)?c:a);
   const alta = cats.reduce((a,c)=>(c.novo-c.hoje)>(a.novo-a.hoje)?c:a);
   let f = `${NOME[ramo]||ramo} vende <b>${km(venda)}</b> no mês, com <b>${km(impH)}</b> de imposto embutido (${pct(impH/venda)} do preço).<br>`;
-  f += `Em 2033, com a mesma receita líquida, o imposto ${dif<=0?"cai":"sobe"} para <b>${km(impN)}</b> (${pct(impN/vendaN)}).<br>`;
+  f += `Em 2033, com a loja ganhando o mesmo de hoje, o imposto ${dif<=0?"cai":"sobe"} para <b>${km(impN)}</b> (${pct(impN/vendaN)}).<br>`;
   f += `A maior queda é em <b>${esc(queda.c)}</b>, de ${pct(queda.hoje,0)} para ${pct(queda.novo,0)} do preço.`;
   if (alta.novo > alta.hoje + 0.001) f += `<br>A maior alta é em <b>${esc(alta.c)}</b>, de ${pct(alta.hoje,0)} para ${pct(alta.novo,0)}.`;
   document.getElementById("frase").innerHTML = f;
 
+  exemplo(ls);
   ranking(ls);
   divergente(por==="categoria" ? cats.map(c=>({n:c.c, dif:c.dif, h:c.ih, nv:c.inn})) : ls.map(l=>({n:l.it.produto, dif:l.r.dif, h:l.r.impHoje, nv:l.r.impNovo})), dif);
   tabela(ls);
   premissasTabela();
+}
+
+/* um produto real da loja, em reais, para quem não é da área */
+function exemplo(ls){
+  const l = ls.slice().sort((a,b)=>b.r.vendaHoje-a.r.vendaHoje)[0], it = l.it, r = l.r;
+  const impHoje = it.preco*r.tHoje, liquida = it.preco - impHoje, impNovo = r.precoNovo - liquida;
+  document.getElementById("exemplo").innerHTML = `
+    <span class="lb">Na prática: o produto que mais vende</span>
+    <span class="prod">${esc(it.produto)} ${tag(it).replace('class="tag','style="margin-left:6px;vertical-align:2px" class="tag')}</span>
+    <div class="recibo num">
+      <div><span>Preço hoje</span><b>${brl.format(it.preco)}</b></div>
+      <div><span>Quanto disso é imposto hoje</span><b>${brl.format(impHoje)} (${pct(r.tHoje,0)})</b></div>
+      <div><span>O que fica para a loja</span><b>${brl.format(liquida)}</b></div>
+      <div><span>Imposto sobre ele em 2033</span><b>${brl.format(impNovo)}</b></div>
+      <div><span>Preço em 2033 para a loja ganhar o mesmo</span><b class="${cor(r.variacao)}">${brl.format(r.precoNovo)} (${sinalPct(r.variacao)})</b></div>
+    </div>`;
 }
 
 function pilha(v, max){
@@ -374,7 +420,7 @@ function ranking(ls){
     <li data-id="${l.it.id}" tabindex="0">
       <span class="pos">${i+1}</span>
       <div><span class="nm">${esc(l.it.produto)}</span>${tag(l.it)}
-        <div class="det num">carga ${pct(l.r.tHoje,0)} → ${pct(l.r.cargaNovo,0)} · preço ${sinalPct(l.r.variacao)}</div></div>
+        <div class="det num">imposto no preço ${pct(l.r.tHoje,0)} → ${pct(l.r.cargaNovo,0)} · preço ${sinalPct(l.r.variacao)}</div></div>
       <span class="imp num ${cor(l.r.dif)}">${km(l.r.dif,true)}</span>
     </li>`).join("");
 }
