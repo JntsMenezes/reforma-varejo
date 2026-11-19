@@ -2,17 +2,17 @@ ramo;produto;categoria;ncm;nbs;cst;cClassTrib;preco;qtd_mes
 Farmácia;Dipirona 500mg 10 comp;Medicamento;30049099;;200;200032;8.90;620
 Farmácia;Paracetamol 750mg 20 comp;Medicamento;30049099;;200;200032;12.50;480
 Farmácia;Ibuprofeno 400mg 10 caps;Medicamento;30049099;;200;200032;16.90;350
-Farmácia;Losartana 50mg 30 comp;Medicamento;30049099;;200;200032;14.90;410
+Farmácia;Losartana 50mg 30 comp;Medicamento alíquota zero;30049099;;200;200009;14.90;410
 Farmácia;Omeprazol 20mg 28 caps;Medicamento;30049099;;200;200032;22.40;300
 Farmácia;Amoxicilina 500mg 21 caps;Medicamento;30049099;;200;200032;29.90;160
-Farmácia;Sinvastatina 20mg 30 comp;Medicamento;30049099;;200;200032;18.70;220
+Farmácia;Sinvastatina 20mg 30 comp;Medicamento alíquota zero;30049099;;200;200009;18.70;220
 Farmácia;Xarope para tosse 120ml;Medicamento;30049099;;200;200032;34.90;140
 Farmácia;Antialérgico loratadina 12 comp;Medicamento;30049099;;200;200032;19.90;190
-Farmácia;Anticoncepcional 21 comp;Medicamento;30049099;;200;200032;42.00;180
+Farmácia;Anticoncepcional levonorgestrel + etinilestradiol 21 comp;Medicamento alíquota zero;30049099;;200;200009;42.00;180
 Farmácia;Insulina NPH 10ml;Medicamento alíquota zero;30043100;;200;200009;89.00;45
-Farmácia;Antirretroviral 30 comp;Medicamento alíquota zero;30049099;;200;200009;210.00;12
+Farmácia;Dolutegravir 50mg 30 comp;Medicamento alíquota zero;30049099;;200;200009;210.00;12
 Farmácia;Seringa descartável 1ml;Dispositivo médico;90183111;;200;200030;1.20;900
-Farmácia;Curativo adesivo 10 un;Dispositivo médico;30059090;;200;200030;9.90;260
+Farmácia;Curativo adesivo 10 un;Dispositivo médico;30051090;;000;000001;9.90;260
 Farmácia;Luva de procedimento 100 un;Dispositivo médico;40151900;;200;200030;39.90;40
 Farmácia;Termômetro digital;Dispositivo médico;90251990;;200;200004;24.90;55
 Farmácia;Bolsa de colostomia;Dispositivo médico;30069110;;200;200030;68.00;25

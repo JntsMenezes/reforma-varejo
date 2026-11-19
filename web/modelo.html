@@ -1,23 +1,21 @@
 <meta charset="utf-8">
 <title>Reforma no Varejo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap">
 <style>
-/* Mesma linguagem do painel "Performance por categoria": fundo cinza-claro, painéis brancos, número grande, frase com a conta, barras divergentes. Só tema claro. */
+/* Visual dos BIs (design system Promofarma, destaque azul no lugar do vermelho): fundo #F6F6F3, cartões brancos, Segoe UI Light, frase para leigo, tabelas com a regra de alinhamento dos BIs. Só tema claro. */
 :root{
   color-scheme:light;
-  --bg:#f4f4f2; --surface:#fdfdfc; --sunk:#efefec; --ink:#18181b; --ink-2:#52525b; --muted:#71717a; --line:#e2e2df;
-  --accent:#2f54c9; --accent-soft:rgba(47,84,201,.09);
-  --up:#1d7a3e; --up-soft:rgba(29,122,62,.1); --down:#c0392b; --down-soft:rgba(192,57,43,.09);
-  --warn:#a85d00; --warn-soft:rgba(168,93,0,.1);
-  --hoje:#a1a1aa; --s1:#2f54c9; --s2:#7d93df;
-  --r:14px; --shadow:0 1px 2px rgba(24,24,27,.04),0 8px 24px -12px rgba(24,24,27,.10);
+  --bg:#F6F6F3; --surface:#FFFFFF; --sunk:#F0F0EC; --ink:#16181D; --ink-2:#3F4654; --muted:#6A7180; --line:#EAEAE6;
+  --accent:#2F6FED; --accent-soft:rgba(47,111,237,.09);
+  --up:#18935E; --up-soft:rgba(24,147,94,.11); --down:#D23142; --down-soft:rgba(210,49,66,.09);
+  --warn:#C77A0A; --warn-soft:rgba(199,122,10,.11);
+  --roxo:#5A56D6; --roxo-soft:rgba(90,86,214,.1);
+  --s1:#16181D; --s2:#6A7180;
+  --r:16px; --shadow:0 1px 2px rgba(22,24,29,.04),0 10px 28px -14px rgba(22,24,29,.12);
 }
 *{box-sizing:border-box}
-html{scrollbar-color:#c9c9c4 var(--bg)}
-body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Geist",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+html{scrollbar-color:#C9CDD3 var(--bg)}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 15px/1.5 "Segoe UI","Segoe UI Light",system-ui,-apple-system,Roboto,sans-serif;-webkit-font-smoothing:antialiased}
 ::selection{background:var(--accent-soft)}
 .num{font-variant-numeric:tabular-nums}
 .wrap{max-width:1180px;margin:0 auto;padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
@@ -39,7 +37,7 @@ select{padding-right:32px;appearance:none;cursor:pointer;min-width:160px;
   background-image:linear-gradient(45deg,transparent 50%,var(--muted) 50%),linear-gradient(135deg,var(--muted) 50%,transparent 50%);
   background-position:calc(100% - 15px) 52%,calc(100% - 10px) 52%;background-size:5px 5px;background-repeat:no-repeat}
 .campo input{width:96px;text-align:right;font-variant-numeric:tabular-nums}
-.campo input:hover,select:hover{border-color:#cfcfca}
+.campo input:hover,select:hover{border-color:#C9CDD3}
 
 /* resumo */
 .resumo{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;margin-bottom:16px}
@@ -50,7 +48,7 @@ select{padding-right:32px;appearance:none;cursor:pointer;min-width:160px;
 .comp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .comp>div{background:var(--sunk);border-radius:10px;padding:10px 12px;display:grid;gap:2px}
 .comp .lb{font-size:12px;color:var(--ink-2)}
-.comp .v{font-size:18px;font-weight:500}
+.comp .v{font-size:19px;font-weight:600}
 .comp .rs{font-size:12px;color:var(--ink-2)}
 .pilha{margin-top:18px;display:grid;gap:8px}
 .pilha .lin{display:grid;grid-template-columns:44px 1fr;gap:10px;align-items:center;font-size:12.5px;color:var(--ink-2)}
@@ -59,7 +57,7 @@ select{padding-right:32px;appearance:none;cursor:pointer;min-width:160px;
 .pilha .leg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink-2);margin-left:54px}
 .pilha .leg i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:5px}
 .frase{margin:16px 0 0;color:var(--ink-2);max-width:64ch}
-.frase b{color:var(--ink);font-weight:500}
+.frase b{color:var(--ink);font-weight:600}
 
 .lista{padding:22px 24px}
 .lista h2,.bloco h2{font-size:16px;font-weight:600;letter-spacing:-.01em;margin:0}
@@ -68,21 +66,22 @@ select{padding-right:32px;appearance:none;cursor:pointer;min-width:160px;
 .lista li{display:grid;grid-template-columns:22px 1fr auto;gap:10px;align-items:center;padding:9px 10px;border-radius:10px;cursor:pointer}
 .lista li:hover{background:var(--sunk)}
 .lista .pos{color:var(--muted);font-size:13px}
-.lista .nm{font-weight:500}
+.lista .nm{font-weight:600}
 .lista .det{font-size:12.5px;color:var(--ink-2)}
-.lista .imp{font-weight:500;text-align:right;white-space:nowrap}
+.lista .imp{font-weight:600;text-align:right;white-space:nowrap}
 .tag{display:inline-flex;align-items:center;font-size:12px;padding:1px 8px;border-radius:99px;margin-left:6px;white-space:nowrap;font-weight:400}
 .tag.zero{background:var(--up-soft);color:var(--up)}
-.tag.red{background:var(--accent-soft);color:var(--accent)}
+.tag.red{background:var(--roxo-soft);color:var(--roxo)}
 .tag.cheia{background:var(--sunk);color:var(--ink-2)}
 .tag.serv{background:var(--warn-soft);color:var(--warn)}
 
 /* explicação */
 .intro{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:16px;margin-bottom:16px}
-.intro .txt{padding:22px 26px;display:grid;gap:10px;align-content:start}
+.intro .txt{padding:22px 26px;display:grid;gap:6px;align-content:start}
+.intro .regras{margin:4px 0 8px}
 .intro h2{font-size:18px;font-weight:600;letter-spacing:-.015em;margin:0}
 .intro p{margin:0;color:var(--ink-2);max-width:66ch}
-.intro p b{color:var(--ink);font-weight:500}
+.intro p b{color:var(--ink);font-weight:600}
 .regras{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
 .regras .tag{margin-left:0;font-size:13px;padding:3px 10px}
 .exemplo{padding:22px 24px;display:grid;gap:12px;align-content:start}
@@ -121,10 +120,11 @@ select{padding-right:32px;appearance:none;cursor:pointer;min-width:160px;
 /* tabela */
 .tab-wrap{overflow-x:auto;margin:6px -6px 0}
 table{width:100%;border-collapse:collapse;font-size:14px}
-th{font-size:12px;font-weight:500;color:var(--muted);text-align:right;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:12px;font-weight:400;color:var(--muted);text-align:center;padding:8px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
 th button{border:0;background:none;padding:0;color:inherit;font:inherit;cursor:pointer}
 th[aria-sort="ascending"] button::after{content:" ↑"} th[aria-sort="descending"] button::after{content:" ↓"}
-td{padding:9px 10px;text-align:right;white-space:nowrap;vertical-align:top}
+td{padding:9px 10px;text-align:center;white-space:nowrap;vertical-align:top}
+th.rs,td.rs{text-align:left}
 th.l,td.l{text-align:left}
 tbody tr.item{cursor:pointer;transition:background .15s}
 tbody tr.item:hover{background:var(--sunk)}
@@ -144,7 +144,7 @@ tr.det td{padding:4px 10px 16px;text-align:left;white-space:normal;background:va
 .detalhe .art{font-weight:600}
 .detalhe .lei{font-size:13.5px;line-height:1.55;white-space:pre-line;max-width:72ch}
 .codigos{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px}
-.codigos b{font-weight:500}
+.codigos b{font-weight:600}
 .conta{font-size:13.5px}
 .memoria{font-size:12.5px;color:var(--ink-2);line-height:1.5}
 
@@ -155,7 +155,7 @@ tr.det td{padding:4px 10px 16px;text-align:left;white-space:normal;background:va
 .prem td input:hover{border-color:var(--line)}
 .prem td input:focus{background:var(--surface);border-color:var(--accent);outline:none}
 .btn{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:7px 12px;font-size:13.5px;cursor:pointer;color:var(--ink-2)}
-.btn:hover{color:var(--ink);border-color:#cfcfca}
+.btn:hover{color:var(--ink);border-color:#C9CDD3}
 
 footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max-width:90ch}
 @media (prefers-reduced-motion:reduce){.bar,.pilha .barra span{transition:none}}
@@ -193,17 +193,20 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
   <section class="intro">
     <div class="painel txt">
       <h2>O que esta página mostra</h2>
-      <p>A reforma tributária troca cinco impostos sobre o consumo (<b>ICMS, ISS, PIS, Cofins e IPI</b>) por dois: a <b>CBS</b>, do governo federal, e o <b>IBS</b>, de estados e municípios. A troca vai até 2033.</p>
-      <p>Nem todo produto vai pagar igual. A lei dá desconto para alguns grupos e zera o imposto de outros:</p>
+      <p>A reforma tributária troca cinco impostos sobre o consumo (<b>ICMS, ISS, PIS, Cofins e IPI</b>) por dois: a <b>CBS</b>, do governo federal, e o <b>IBS</b>, de estados e municípios.</p>
+      <p>A troca termina em 2033.</p>
+      <p>Nem todo produto vai pagar igual.</p>
+      <p>A lei dá desconto para alguns grupos e zera o imposto de outros:</p>
       <div class="regras"><span class="tag red">desconto de 60%: remédio, higiene, alguns alimentos</span><span class="tag zero">sem imposto: cesta básica, hortifrúti, alguns remédios</span><span class="tag cheia">taxa cheia: o resto</span></div>
-      <p>Escolha um negócio de exemplo no alto da página. Os números abaixo mostram quanto imposto vai dentro do preço hoje e quanto vai em 2033, produto por produto.</p>
+      <p>Escolha um negócio de exemplo no alto da página.</p>
+      <p>Os números abaixo mostram quanto imposto vai dentro do preço hoje e quanto vai em 2033, produto por produto.</p>
     </div>
     <div class="painel exemplo" id="exemplo"></div>
   </section>
 
   <section class="resumo">
     <div class="painel hero">
-      <div class="mes">Imposto que vai dentro do preço, nas vendas de um mês, hoje</div>
+      <div class="mes">Imposto dentro do preço das vendas do mês, hoje</div>
       <div class="valor num" id="h-valor"></div>
       <div class="comp">
         <div><span class="lb">Em 2033</span><span class="v num" id="c1"></span><span class="rs num" id="c1s"></span></div>
@@ -214,7 +217,7 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
     </div>
     <div class="painel lista">
       <h2>Onde mais muda</h2>
-      <p class="nota">Produtos com a maior diferença de imposto no mês. Clique para ver a base legal.</p>
+      <p class="nota">Produtos em que o imposto do mês mais muda.</p><p class="nota" style="margin-top:-10px">Clique para ver o artigo da lei.</p>
       <ol id="ranking"></ol>
     </div>
   </section>
@@ -247,11 +250,11 @@ footer{color:var(--muted);font-size:13px;margin-top:8px;display:grid;gap:6px;max
         <thead><tr>
           <th class="l rank">#</th>
           <th class="l" data-col="produto"><button type="button">Produto</button></th>
-          <th class="l hide-m">Regra em 2033</th>
+          <th class="hide-m">Regra em 2033</th>
           <th data-col="tHoje"><button type="button">Imposto no preço hoje</button></th>
           <th data-col="cargaNovo"><button type="button">Em 2033</button></th>
-          <th class="hide-m" data-col="preco"><button type="button">Preço hoje</button></th>
-          <th class="hide-m" data-col="precoNovo"><button type="button">Preço 2033</button></th>
+          <th class="rs hide-m" data-col="preco"><button type="button">Preço hoje</button></th>
+          <th class="rs hide-m" data-col="precoNovo"><button type="button">Preço 2033</button></th>
           <th data-col="variacao"><button type="button">Variação do preço</button></th>
         </tr></thead>
         <tbody id="linhas"></tbody>
@@ -320,13 +323,13 @@ const n1 = (v,d=1) => v.toLocaleString("pt-BR",{minimumFractionDigits:d,maximumF
 const pct = (v,d=1) => n1(v*100,d) + "%";
 const sinalPct = v => Math.abs(v) < 0.0005 ? "0,0%" : (v>0?"+":"−") + pct(Math.abs(v));
 const cor = v => v < -0.0005 ? "up" : v > 0.0005 ? "down" : "";
-/* R$ em k/M, como nos BIs */
+/* R$ escolhe a unidade sozinho, como nos BIs: mi, mil ou valor cheio */
 function km(v, sinal=false){
   const a = Math.abs(v), s = sinal ? (v>0.5?"+":v<-0.5?"−":"") : (v<0?"−":"");
   let t;
-  if (a >= 1e6) t = n1(a/1e6, 2) + "M";
-  else if (a >= 1e4) t = Math.round(a/1e3) + "k";
-  else if (a >= 1e3) t = n1(a/1e3) + "k";
+  if (a >= 1e6) t = n1(a/1e6) + " mi";
+  else if (a >= 1e4) t = Math.round(a/1e3) + " mil";
+  else if (a >= 1e3) t = n1(a/1e3) + " mil";
   else t = Math.round(a).toString();
   return s + "R$ " + t;
 }
@@ -356,7 +359,7 @@ function render(){
   const venda=s("vendaHoje"), vendaN=s("vendaNovo"), impH=s("impHoje"), impN=s("impNovo");
   const dif = impN-impH, varCesta = vendaN/venda-1;
 
-  document.getElementById("sub").textContent = `${DESC[ramo]||ramo}, ${ls.length} itens · enquadramento pela calculadora da Receita`;
+  document.getElementById("sub").textContent = `${DESC[ramo]||ramo}, ${ls.length} itens · regras conferidas na calculadora oficial da Receita`;
   document.getElementById("h-valor").textContent = km(impH);
   document.getElementById("c1").textContent = km(impN);
   const c1s = document.getElementById("c1s"); c1s.textContent = `${km(dif,true)} no mês`; c1s.className = "rs num " + cor(dif);
@@ -400,9 +403,9 @@ function pilha(v, max){
   const w = x => (x/max*100).toFixed(2)+"%";
   const seg = (x,c,txt) => x>0.5 ? `<span style="flex:0 0 ${w(x)};background:${c}" title="${txt}: ${km(x)}">${x/max>.14?km(x):""}</span>` : "";
   document.getElementById("pilha").innerHTML = `
-    <div class="lin"><span>Hoje</span><div class="barra">${seg(v.icms,"#71717a","ICMS/ISS")}${seg(v.pis,"#a1a1aa","PIS/COFINS")}${seg(v.ipi,"#c4c4ca","IPI")}</div></div>
+    <div class="lin"><span>Hoje</span><div class="barra">${seg(v.icms,"#8A909C","ICMS/ISS")}${seg(v.pis,"#AEB3BC","PIS/COFINS")}${seg(v.ipi,"#C9CDD3","IPI")}</div></div>
     <div class="lin"><span>2033</span><div class="barra">${seg(v.cbs,"var(--s1)","CBS")}${seg(v.ibs,"var(--s2)","IBS")}</div></div>
-    <div class="leg"><span><i style="background:#71717a"></i>ICMS/ISS</span><span><i style="background:#a1a1aa"></i>PIS/COFINS</span>${v.ipi>0.5?'<span><i style="background:#c4c4ca"></i>IPI</span>':""}<span><i style="background:var(--s1)"></i>CBS</span><span><i style="background:var(--s2)"></i>IBS</span></div>`;
+    <div class="leg"><span><i style="background:#8A909C"></i>ICMS/ISS</span><span><i style="background:#AEB3BC"></i>PIS/COFINS</span>${v.ipi>0.5?'<span><i style="background:#C9CDD3"></i>IPI</span>':""}<span><i style="background:var(--s1)"></i>CBS</span><span><i style="background:var(--s2)"></i>IBS</span></div>`;
 }
 
 function porCategoria(ls){
@@ -461,11 +464,11 @@ function tabela(ls){
     let h = `<tr class="item${sel?" sel":""}" data-id="${it.id}" tabindex="0" aria-expanded="${sel}">
       <td class="l rank num">${i+1}</td>
       <td class="l">${esc(it.produto)}<span class="cat">${esc(it.categoria)}</span></td>
-      <td class="l hide-m">${tag(it).replace('class="tag','style="margin-left:0" class="tag')}</td>
+      <td class="hide-m">${tag(it).replace('class="tag','style="margin-left:0" class="tag')}</td>
       <td class="num">${pct(r.tHoje)}</td>
       <td class="num">${pct(r.cargaNovo)}</td>
-      <td class="num hide-m">${brl.format(it.preco)}</td>
-      <td class="num hide-m">${brl.format(r.precoNovo)}</td>
+      <td class="rs num hide-m">${brl.format(it.preco)}</td>
+      <td class="rs num hide-m">${brl.format(r.precoNovo)}</td>
       <td class="num ${cor(r.variacao)}">${sinalPct(r.variacao)}</td></tr>`;
     if (sel) h += detalhe(it, r);
     return h;
